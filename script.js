@@ -8,6 +8,7 @@ janji1 = new Promise((resolve, reject) => {
 });
 
 console.log(janji1);
+
 janji1
     .then( response => console.log('OK : '+ response) )
     .catch( response => console.log('NOT OK : ' + response) );
@@ -23,3 +24,13 @@ janji2 = new Promise( resolve => {
 // console.log(janji2);
 
 janji2.then(() => console.log(janji2));
+
+function cobaPromise() {
+    return new Promise( resolve => {
+        setTimeout(() => {
+            resolve('Janji ketiga ditepati');
+        }, 5000);
+    });
+}
+
+console.log(cobaPromise());
