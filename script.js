@@ -34,3 +34,7 @@ function cobaPromise() {
 }
 
 console.log(cobaPromise());
+
+// MEMASUKKAN cobaPromise ke dalam constant
+const coba = cobaPromise();
+coba.then(() => console.log(coba));
